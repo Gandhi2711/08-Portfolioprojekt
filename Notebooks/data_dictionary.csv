@@ -1,0 +1,19 @@
+Column1;Column2;Column3
+column;dtype;description
+person_id;string;Unique person identifier.
+field;string;Career field: tech, finance, healthcare, sales, marketing, operations, education.
+education;string;Highest education: highschool, associate, bachelors, masters, phd.
+years_in_workforce;int;Total years of career history.
+starting_salary_usd;int;First-job salary, USD.
+num_jobs;int;Number of jobs held over the career.
+num_switches;int;Number of employer changes (num_jobs - 1).
+avg_tenure_years;float;Average years per job (the key behavioral variable).
+longest_tenure_years;float;Longest single stint, years.
+switching_style;string;frequent_hopper (<1.5y avg), strategic_mover (1.5-4y), loyalist (4y+).
+pct_external_moves;float;Share of pay advances that came from external moves vs internal promotions (0-1).
+current_salary_usd;int;TARGET. Current salary, USD.
+career_cagr_pct;float;TARGET. Compound annual growth rate of salary over the career, %.
+total_growth_pct;float;Total salary growth from start to now, %.
+salary_vs_stayer_ratio;float;Current salary divided by the counterfactual of never switching (internal raises only). >1 = came out ahead.
+high_growth;int;TARGET (binary). 1 if career_cagr_pct is in the top quartile.
+out_earns_stayer;int;TARGET (binary). 1 if salary_vs_stayer_ratio > 1.0.
